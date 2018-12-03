@@ -115,6 +115,29 @@ include 'getData.php';
 	<input type="submit" value="Check Customers">
 </form>
 
+<br>
+<hr>
+<br>
+
+<form action="notBought.php" method="post">
+	Show All Products That Have Never Been Bought: 
+	<br><br>
+	<input type="submit" value="Check Products">
+</form>
+
+<br>
+<hr>
+<br>
+
+<form action="productPurchases.php" method="post">
+	Show The Details Of A Particular Product:
+	<br><br>
+	Product ID: 
+	<input type="text" name="prodID" maxLength="2">
+	<br><br>
+	<input type="submit" value="Check Details">
+</form>
+
 </body>
 </html>
 
