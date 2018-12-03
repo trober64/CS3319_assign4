@@ -7,10 +7,17 @@ include 'connectToDB.php';
 <?php
 
 $customerID = $_POST["customerID"];
+if(empty($customerID)){
+	die("EMPTY TEXTBOX: Please return to the previous screen and fill the text box");
+}
+
 $query0 = "SELECT DISTINCT firstname,lastname FROM customer,purchases WHERE customer.cusID=purchases.cusID AND customer.cusID='$customerID'";
 $result = mysqli_query($connection,$query0);
 if (!$result) {
 	die("databases query failed.");
+}
+if(mysqli_num_rows($result) == 0){
+	die("CUSTOMERID DOES NOT EXIST: Please return to the previous screen and enter a valid customer ID");
 }
 echo "<h9>";
 while($row = mysqli_fetch_assoc($result)){

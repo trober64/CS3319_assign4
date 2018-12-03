@@ -7,6 +7,11 @@ include'connectToDB.php';
 <h1><u> All Products: </u></h1>
 <?php
 $productOrder = $_POST["productOrder"];
+
+if(empty($productOrder)){
+	die("ERROR: You did not select a box");
+}
+
 $query = "SELECT description,cost FROM product ORDER BY $productOrder";
 $result = mysqli_query($connection,$query);
 if (!$result) {
