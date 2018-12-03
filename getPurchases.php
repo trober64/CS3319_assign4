@@ -34,5 +34,8 @@ mysqli_free_result($result);
 echo "</ol>";
 ?>
 
+<br><br>
+<a href="PHPfile1.php">RETURN TO PREVIOUS PAGE</a>
+
 </body>
 </html>

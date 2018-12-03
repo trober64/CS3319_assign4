@@ -21,7 +21,7 @@ else{
 	}
 
 	if(mysqli_num_rows($result) == 0){
-		echo "CUSTOMERID DOES NOT EXIST: Please return to the previous page and enter a valid customer ID";
+		die("CUSTOMERID DOES NOT EXIST: Please return to the previous page and enter a valid customer ID");
 	}
 	mysqli_free_result($result);
 
@@ -31,7 +31,7 @@ else{
     		die("databases query failed.");
 	}
 	if(mysqli_num_rows($result) == 0){
-		echo "PRODUCTID DOES NOT EXIST: Please return to the previous page and enter a valid product ID"; 
+		die("PRODUCTID DOES NOT EXIST: Please return to the previous page and enter a valid product ID"); 
 	}
 	mysqli_free_result($result);
 	
@@ -59,9 +59,9 @@ else{
 }
 mysqli_close($connection);
 
-
 ?>
-
+<br><br>
+<a href="PHPfile1.php">RETURN TO PREVIOUS PAGE</a>
 
 </body>
 </html>
