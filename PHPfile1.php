@@ -2,17 +2,23 @@
 <html>
 <body>
 
+<!-- connects to the database -->
 <?php
 include 'connectToDB.php';
 ?>
 
+
 <h2><u> Welcome to the Sports Store's directory!</u></h2>
 <br>
 <h3> Current Customers: </h3>
+<!-- Allows us to see the information of all the customers -->
 <?php
 include 'getData.php';
 ?> 
+
 <hr>
+
+<!-- Allows user to see all the purchases of a customer -->
 <form action="getPurchases.php" method="post">
 	Get The Customer's Purchase History:<br><br>
 	CustomerID:<br>	
@@ -20,9 +26,12 @@ include 'getData.php';
 	<br><br>
 	<input type="submit" value="Submit Customer ID">
 </form>
+
 <br>
 <hr>
 <br>
+
+<!-- Allows user to see all of the products ordered in a specific way -->
 <form action="getProducts.php" method="post">
 	Get List of All Products in Which Order? <br><br>
 	<input type="radio" name="productOrder" value="description ASC"> Product Description Ascending <br>
@@ -37,6 +46,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to insert a purchase for a customer -->
 <form action="insertPurchase.php" method="post">
 	Add a Purchase For a Customer:<br><br>
 	Customer ID: 
@@ -55,6 +65,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to create a new customer -->
 <form action="insertCustomer.php" method="post">
 	Insert A New Customer:
 	<br><br>
@@ -80,6 +91,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to update the phone number of a customer -->
 <form action="updatePhone.php" method="post">
 	Choose Customer To Update Their Phone Number:
 	<br><br>
@@ -93,6 +105,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to delete a customer in the database -->
 <form action="deleteCustomer.php" method="post">
 	Choose A Customer To Delete:
 	<br><br>
@@ -106,6 +119,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to see which customers bought more than a given quantity of any item -->
 <form action="boughtQuantity.php" method="post">
 	See Who Bought More Than A Given Quantity:
 	<br><br>
@@ -119,6 +133,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to see which products have not been bought yet -->
 <form action="notBought.php" method="post">
 	Show All Products That Have Never Been Bought: 
 	<br><br>
@@ -129,6 +144,7 @@ include 'getData.php';
 <hr>
 <br>
 
+<!-- Allows user to see the details of a product -->
 <form action="productPurchases.php" method="post">
 	Show The Details Of A Particular Product:
 	<br><br>

@@ -1,8 +1,11 @@
 <?php
+//all the information to connect to the database
 $dbhost = "localhost";
 $dbuser= "root";
 $dbpass = "Tgr-175194";
-$dbname = "trober64assign4db";
+$dbname = "trober64assign2db";
+
+//This is what actually connects to the database
 $connection = mysqli_connect($dbhost, $dbuser,$dbpass,$dbname);
 if (mysqli_connect_errno()) {
      die("database connection failed :" .
